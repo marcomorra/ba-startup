@@ -1,5 +1,7 @@
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
 
 .container {
   max-width: 1170px;
@@ -7,66 +9,91 @@
   margin: 0 auto;
   padding: 0 15px; }
 
-/* Ba-grid  */
-.ba-row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -15px;
-  margin-right: -15px; }
+h1, h2, h3, h4, h5, h6, p {
+  font-weight: normal;
+  font-style: normal; }
 
-.ba-row + .ba-row {
-  margin-top: 1rem; }
+ol, ul {
+  list-style: none; }
 
-[class^='ba-col'] {
-  padding-left: 15px;
-  padding-right: 15px;
-  width: 100%; }
+li {
+  text-transform: none; }
 
-.ba-col-1 {
-  width: 8.33333%; }
+a {
+  text-decoration: none;
+  border: none;
+  outline: none; }
 
-.ba-col-2 {
-  width: 16.66667%; }
+img {
+  vertical-align: top; }
 
-.ba-col-3 {
-  width: 25%; }
+button {
+  background: none;
+  border: 0;
+  color: inherit;
+  border: none;
+  outline: none; }
 
-.ba-col-4 {
-  width: 33.33333%; }
+body {
+  color: #555555; }
 
-.ba-col-5 {
-  width: 41.66667%; }
+h1 {
+  font-size: 48px;
+  font-family: 'Montserrat', sans-serif; }
 
-.ba-col-6 {
-  width: 50%; }
+h2 {
+  font-size: 20px;
+  font-family: 'Roboto Slab', serif; }
 
-.ba-col-7 {
-  width: 58.33333%; }
+h3 {
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif; }
 
-.ba-col-8 {
-  width: 66.66667%; }
+h4 {
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif; }
 
-.ba-col-9 {
-  width: 75%; }
+h5, p {
+  font-size: 14px; }
 
-.ba-col-10 {
-  width: 83.33333%; }
+p {
+  font-family: 'Roboto Slab', serif; }
 
-.ba-col-11 {
-  width: 91.66667%; }
+h5 {
+  font-family: 'Montserrat', sans-serif; }
 
-.ba-col-12 {
-  width: 100%; }
+.px24 {
+  font-size: 24px; }
 
-/* ba-common */
-.ba-text-center {
+.bold {
+  font-weight: bold; }
+
+.upper {
+  text-transform: uppercase; }
+
+.center {
   text-align: center; }
 
-.ba-text-left {
-  text-align: left; }
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table; }
 
-.ba-text-right {
-  text-align: right; }
+.button {
+  border: 2px solid #fff;
+  padding: 15px 34px;
+  cursor: pointer;
+  color: #fff; }
+  .button:hover {
+    color: #c0301c;
+    background-color: #fff;
+    transition: .5s; }
 
-.ba-text-justify {
-  text-align: justify; }
+.visually-hidden {
+  position: absolute;
+  left: -9999999px;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden; }

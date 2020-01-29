@@ -4,16 +4,11 @@ $gap: 15px;
 $col: 12;
 $colWidth: 100% / $col;
 
-$primaryColor: pink;
-$secondaryColor: #4e4e4e;
-
-$btnBorderColor: $primaryColor;
-
-
-*{
-    box-sizing: border-box
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
-
 .container{
     max-width: $container;
     width: 100%;
@@ -21,60 +16,116 @@ $btnBorderColor: $primaryColor;
     padding: 0 $gap;
 }
 
-/* Ba-grid  */
-.ba-row{
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -$gap;
-    margin-right: -$gap;
+// Reset browser styles
+h1, h2, h3, h4, h5, h6, p {
+	font-weight: normal;
+	font-style: normal;
 }
 
-.ba-row + .ba-row{
-    margin-top: 1rem;
+ol,ul {
+	list-style: none;
 }
 
-[class^='ba-col']{
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 100%;
+li {
+	text-transform: none;
 }
 
-@for $i from 1 through $col {
-    .ba-col-#{$i}{
-        width: $colWidth * $i;
-    }
+a {
+	text-decoration: none;
+	border: none;
+	outline: none;
 }
 
-
-// mixins
-@mixin buttonHover {
-    background-color: pink;
-    border-color: darken($btnBorderColor, 15%)
-
+img {
+	vertical-align: top;
 }
 
-
-
-
-/* ba-common */
-
-.ba-text-center{
-    text-align: center;
+button {
+	background: none;
+    border: 0;
+    color: inherit;
+    border: none;
+    outline: none;
+}
+// Basic style
+body {
+	color: #555555;
 }
 
-.ba-text-left{
-    text-align: left;
-}
-.ba-text-right{
-    text-align: right;
-}
-.ba-text-justify{
-    text-align: justify;
+h1 {
+	font-size: 48px;
+	font-family: 'Montserrat', sans-serif;
 }
 
+h2 {
+	font-size: 20px;
+	font-family: 'Roboto Slab', serif;
+}
 
+h3 {
+	font-size: 18px;
+	font-family: 'Montserrat', sans-serif;
+}
 
+h4 {
+	font-size: 16px;
+	font-family: 'Montserrat', sans-serif;
+}
 
+h5, p {
+	font-size: 14px;
+}
+
+p {
+	font-family: 'Roboto Slab', serif;
+}
+
+h5 {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.px24 {
+	font-size: 24px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.upper {
+	text-transform: uppercase;
+}
+
+.center {
+	text-align: center;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.button {
+	border: 2px solid #fff;
+	padding: 15px 34px;
+	cursor: pointer;
+	color: #fff;
+		&:hover{
+			color: #c0301c;
+			background-color: #fff;
+			transition: .5s;
+		}
+}
+.visually-hidden {
+	position: absolute;
+	left: -9999999px;
+	height: 1px;
+	width: 1px;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+  }
 
 
 
