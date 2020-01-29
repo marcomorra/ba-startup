@@ -154,6 +154,10 @@ h5 {
   text-align: center;
   padding-top: 100px;
   padding-bottom: 70px; }
+  @media (max-width: 700px) {
+    .ba-title {
+      padding-top: 50px;
+      padding-bottom: 30px; } }
   .ba-title h2 {
     font-family: 'Montserrat', sans-serif;
     position: relative;
@@ -203,12 +207,12 @@ h5 {
           transform: scale(1.2); }
         .ba-header .container .ba-headline .ba-nav__btn {
           display: none; }
-      @media (max-width: 700px) {
-        .ba-header .container .ba-headline .ba-nav {
-          width: 100%; }
-          .ba-header .container .ba-headline .ba-nav a {
-            display: block;
-            text-align: center; } }
+        @media screen and (max-width: 768px) {
+          .ba-header .container .ba-headline .ba-nav {
+            widows: 100%; }
+            .ba-header .container .ba-headline .ba-nav a {
+              display: block;
+              text-align: center; } }
     .ba-header .container .ba-title-header {
       margin-top: 24%;
       text-align: center;
@@ -217,25 +221,21 @@ h5 {
         margin-bottom: 1%; }
       .ba-header .container .ba-title-header h2 {
         margin-bottom: 5%; }
-    @media (max-width: 700px) {
-      .ba-header .container .ba-title {
-        padding-top: 50px;
-        padding-bottom: 30px; } }
-
-@media screen and (max-width: 600px) {
-  .ba-section1 .ba-items {
-    flex-flow: row wrap; }
-    .ba-section1 .ba-items .ba-item {
-      margin-bottom: 20px; } }
 
 .ba-section1 .ba-items {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  margin: 70px -15px 100px -15px; }
+  margin: 0 -15px 70px -15px; }
+  @media screen and (max-width: 768px) {
+    .ba-section1 .ba-items {
+      flex-flow: row wrap; } }
   .ba-section1 .ba-items .ba-item {
     text-align: center;
     margin: 0 15px; }
+    @media screen and (max-width: 768px) {
+      .ba-section1 .ba-items .ba-item {
+        margin-bottom: 20px; } }
     .ba-section1 .ba-items .ba-item .icon-letter:before {
       content: 'A';
       position: absolute;
@@ -422,12 +422,6 @@ h5 {
 
 .ba-blog {
   padding-bottom: 100px; }
-  @media (max-width: 700px) {
-    .ba-blog .ba-article {
-      flex-flow: column; }
-      .ba-blog .ba-article img {
-        margin-bottom: 20px;
-        width: 100%; } }
   .ba-blog .ba-article {
     display: flex;
     flex-flow: row;
@@ -437,56 +431,62 @@ h5 {
     padding-bottom: 38px;
     padding-top: 38px;
     border-bottom: 1px solid #dddddd; }
-    .ba-blog .ba-article:first-child {
-      padding-top: 0; }
-    .ba-blog .ba-article:last-child {
-      padding-bottom: 0;
-      border-bottom: none; }
-    .ba-blog .ba-article img {
-      width: 40%; }
-    .ba-blog .ba-article .ba-text {
-      margin-left: 38px;
-      transition: all ease 0.3s;
-      flex: 1 0; }
-      .ba-blog .ba-article .ba-text:hover h4 {
-        color: #c0301c; }
-      .ba-blog .ba-article .ba-text:hover a {
-        color: #c0301c; }
-      .ba-blog .ba-article .ba-text h4 {
-        margin: 14px 0;
-        font-weight: bolder; }
-      .ba-blog .ba-article .ba-text h5 {
-        margin-bottom: 40px;
-        font-family: 'Roboto Slab', serif;
-        font-style: italic; }
-        .ba-blog .ba-article .ba-text h5 a {
-          color: #777777; }
-      .ba-blog .ba-article .ba-text .excerpt {
-        margin-bottom: 35px; }
-      .ba-blog .ba-article .ba-text .date {
-        font-family: 'Montserrat', sans-serif;
+    @media (max-width: 768px) {
+      .ba-blog .ba-article {
+        flex-flow: column; }
+        .ba-blog .ba-article img {
+          margin-bottom: 20px;
+          width: 100%; } }
+  .ba-blog:first-child {
+    padding-top: 0; }
+  .ba-blog:last-child {
+    padding-bottom: 0;
+    border-bottom: none; }
+  .ba-blog img {
+    width: 40%; }
+  .ba-blog .ba-text {
+    margin-left: 38px;
+    transition: all ease 0.3s;
+    flex: 1 0; }
+    .ba-blog .ba-text:hover h4 {
+      color: #c0301c; }
+    .ba-blog .ba-text:hover a {
+      color: #c0301c; }
+    .ba-blog .ba-text h4 {
+      margin: 14px 0;
+      font-weight: bolder; }
+    .ba-blog .ba-text h5 {
+      margin-bottom: 40px;
+      font-family: 'Roboto Slab', serif;
+      font-style: italic; }
+      .ba-blog .ba-text h5 a {
+        color: #777777; }
+    .ba-blog .ba-text .excerpt {
+      margin-bottom: 35px; }
+    .ba-blog .ba-text .date {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      width: 76px;
+      height: 76px;
+      border: 2px solid #555555;
+      margin-right: 22px;
+      margin-bottom: 22px;
+      float: left;
+      text-align: center;
+      position: relative; }
+      .ba-blog .ba-text .date p {
         font-size: 14px;
-        width: 76px;
-        height: 76px;
-        border: 2px solid #555555;
-        margin-right: 22px;
-        margin-bottom: 22px;
-        float: left;
-        text-align: center;
-        position: relative; }
-        .ba-blog .ba-article .ba-text .date p {
-          font-size: 14px;
-          line-height: 20px;
-          letter-spacing: 2px;
-          font-weight: bold;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%); }
-      .ba-blog .ba-article .ba-text .read_more {
-        color: #777777;
-        font-family: 'Roboto Slab', serif;
-        letter-spacing: 1px; }
+        line-height: 20px;
+        letter-spacing: 2px;
+        font-weight: bold;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+    .ba-blog .ba-text .read_more {
+      color: #777777;
+      font-family: 'Roboto Slab', serif;
+      letter-spacing: 1px; }
 
 .ba-section6 {
   background: #f8f8f8;
@@ -530,6 +530,9 @@ h5 {
     flex-flow: row;
     justify-content: space-between;
     color: #555555; }
+    @media (max-width: 768px) {
+      .ba-section7 .ba-our_contacts {
+        flex-flow: column; } }
     .ba-section7 .ba-our_contacts .content {
       margin: 0;
       display: flex;
@@ -594,17 +597,6 @@ h5 {
     padding-bottom: 30px; }
   .ba-nav {
     width: 100%; }
-    .ba-nav a {
-      display: block;
-      text-align: center; }
-  .ba-items {
-    flex-flow: row wrap; }
-    .ba-items .ba-item {
-      margin-bottom: 20px; }
-  .ba-article {
-    flex-flow: column; }
-    .ba-article img {
-      margin-bottom: 20px;
-      width: 100%; }
-  .ba-our_contacts {
-    flex-flow: column; } }
+  .ba-nav a {
+    display: block;
+    text-align: center; } }

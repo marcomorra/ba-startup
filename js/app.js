@@ -1,4 +1,5 @@
 /* Slider in Team block */
+
 let left = document.querySelector('#left');
 let right = document.querySelector('#right');
 var leftPosition = 0;
