@@ -21,7 +21,7 @@ right.addEventListener('click', function(){
     container.style.left = leftPosition + 'px';
 })
 
-new WOW().init();
+
 /* Filter in Works block */
 const works = document.querySelectorAll('.ba-holder');
 const button = document.querySelectorAll('.ba-filter li a');
